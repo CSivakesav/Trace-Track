@@ -1,0 +1,31 @@
+/* Style the top menu */
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .top-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-menu li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .top-menu a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .top-menu a:hover {
+    color: #000000;
+  }

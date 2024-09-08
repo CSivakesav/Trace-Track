@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading Animation</title>
+	<style>
+		/* Create a loading animation container */
+		.loader-container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center; /* Center the text */
+		}
+		
+		/* Create a loading animation */
+		.loader {
+			display: inline-block; /* Display the loader as an inline block */
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border: 10px solid #000000;
+			border-top-color: #fff;
+			animation: spin 1s linear infinite;
+		}
+		
+		/* Create a loading text */
+		.loader-text {
+			display: block; /* Display the text as a block */
+			margin-top: 20px; /* Add some margin to the top */
+			font-size: 18px;
+			color: #1d1919;
+		}
+		
+		/* Animate the loading text */
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		
+		/* Hide the loading animation after 5 seconds */
+		.loader-container {
+			display: block;
+			animation: fadeOut 5s forwards;
+		}
+		
+		@keyframes fadeOut {
+			0% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+		
+		/* Show the main content after 5 seconds */
+		.main-content {
+			display: none;
+			animation: fadeIn 5s forwards;
+			animation-delay: 5s;
+		}
+		
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		
+		/* Center the main content */
+		.main-content {
+			text-align: center; /* Center the text */
+		}
+		
+		/* Center the heading and paragraph */
+		.main-content h1, .main-content p {
+			margin: 0 auto; /* Center the elements */
+			width: 80%; /* Set a width to center the elements */
+		}
+	</style>
+</head>
+<body>
+	<!-- Loading animation container -->
+	<div class="loader-container">
+		<div class="loader"></div>
+		<div class="loader-text">Loading...</div>
+	</div>
+	
+	<script>
+		// Hide the loading animation after 5 seconds and redirect to Main.html
+		setTimeout(function() {
+			document.querySelector('.loader-container').style.display = 'none';
+			window.location.href = 'file:///C:/SIH/New/Main.html';
+		}, 5000);
+	</script>
+</body>
+</html>
+
+
+<style>
+	body {
+		background-image: url('image.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		margin: 0;
+	}
+</style>
